@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.text-shadow-md {
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+.carousel__prev,
+.carousel__next,
+.carousel__prev:hover,
+.carousel__next:hover{
+  color: white;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease; /* Transição suave de tamanho ao passar o mouse */
+  transform: scale(1); /* Tamanho inicial */
+  z-index: 1; /* Certifique-se de que a overlay esteja acima do conteúdo */
+  overflow: hidden; /* Para esconder a parte expandida fora da overlay */
+}
+
+.overlay.active {
+  transform: scale(1.1); /* Aumenta o tamanho ao passar o mouse */
+  width: 120%;
+  height: 120%;
+  z-index: 999;
+}
+
+.overlay-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.overlay-content img {
+  max-width: 100%;
+  height: auto;
+}
+
+.overlay-content .bg-gray-900 {
+  padding: 10px;
+}
+
+.overlay-content h2 {
+  color: white;
+}
