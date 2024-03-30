@@ -11,11 +11,13 @@
   const topRatedMovies = ref([]);
   const releaseMovie = ref(null);
   const dataLoaded = ref(false);
+  const apiUrl = process.env.API_URL;
 
   const fetchData = async () => {
     try {
-      const responseRelease = await fetch('https://4bba-45-71-76-157.ngrok-free.app/api/movies/release');
-      const responseTopRated = await fetch('https://4bba-45-71-76-157.ngrok-free.app/api/movies/top-rated');
+      console.log(`${apiUrl}/movies/release`)
+      const responseRelease = await fetch(`${apiUrl}/movies/release`);
+      const responseTopRated = await fetch(`${apiUrl}/movies/top-rated`);
 
       if (responseRelease.ok) {
         releaseMovies.value = await responseRelease.json();
@@ -44,7 +46,7 @@
 <template>
   <div class="w-full bg-gray-900">
     <div v-if="dataLoaded">
-      
+
       <div
         v-if="releaseMovie.thumbnail"
         class="h-screen bg-cover bg-center"
@@ -67,7 +69,7 @@
             </div>
           </div>
         </div>
-        
+
         <div class="bg-gradient-to-b h-20 from-transparent to-gray-900 bottom-0 absolute w-full"></div>
         <div class="bottom-0 absolute px-10 text-shadow-md">
           <h1 class="text-xl font-bold text-white">Top Rated</h1>
@@ -80,7 +82,7 @@
         <Footer class="py-20 pb-10 px-20" />
       </div>
 
-      
+
     </div>
     <div v-else class="absolute bg-[#141414] inset-0 flex items-center justify-center text-white">
       <p>Loading...</p>

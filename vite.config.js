@@ -12,5 +12,10 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
+  },
+  define: {
+    'process.env': {
+      API_URL: 'http://localhost:3000/api'
+    }
   }
 })
