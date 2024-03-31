@@ -45,7 +45,7 @@ export default {
   <div id="navbar" :class="{ 'bg-black': scrolled, 'bg-opacity-60': !scrolled }" class="p-4 fixed w-full top-0 flex justify-between items-center text-white px-10 transition-all duration-1000">
     <div class="flex items-center space-x-6">
       <div class="mr-4">
-        <router-link to="/" class="text-white text-2xl font-bold"><img class="h-10" src="/images/logo-netflix.png" alt="Netflix Logo" /></router-link>
+        <router-link to="/" class="text-white text-2xl font-bold"><img class="h-10" src="@/assets/logo-netflix.png" alt="Netflix Logo" /></router-link>
       </div>
       <router-link to="/" class="text-white hover:text-gray-300">Home</router-link>
       <router-link to="/series" class="text-white hover:text-gray-300">Series</router-link>
