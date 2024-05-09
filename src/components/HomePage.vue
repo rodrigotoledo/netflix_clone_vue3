@@ -62,7 +62,7 @@
                 <Play fillColor="#000000" :size="30" class="cursor-pointer" />
                 Watch Now
               </router-link>
-              <router-link to="/" class="text-white whitespace-nowrap flex flow-row items-center bg-[#4d6f79] bg-opacity-80 hover:bg-opacity-90 p-2 rounded-md font-medium px-4">
+              <router-link :to="`/movies/${releaseMovie.slug}`" class="text-white whitespace-nowrap flex flow-row items-center bg-[#4d6f79] bg-opacity-80 hover:bg-opacity-90 p-2 rounded-md font-medium px-4">
                 <InformationOutline fillColor="#FFFFFF" :size="30" class="cursor-pointer" />
                 More Information
               </router-link>
