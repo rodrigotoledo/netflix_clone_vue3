@@ -15,7 +15,7 @@ Follow these steps to set up and run the project:
 ### Navigate to the project and install dependencies
 
   ```bash
-  cd vue-netflix-clone
+  cd netflix_clone_vue3
   npm install
   npm run serve
   ```
