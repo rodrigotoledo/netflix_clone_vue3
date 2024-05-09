@@ -8,7 +8,6 @@
       <div class="content flex justify-center">
 
         <div class="login-form p-10 bg-black bg-opacity-60 w-fit">
-          <!-- Logo -->
           <h1 class="text-3xl font-bold mb-4 text-white">Entrar</h1>
           <!-- Form -->
           <form @submit.prevent="login">
@@ -41,10 +40,6 @@
     </div>
   </footer>
 </template>
-
-<script>
-
-</script>
 <style scoped>
 .login-page {
   background-image: url("@/assets/bg-login.jpg");
